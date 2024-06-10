@@ -10,14 +10,32 @@
      crossorigin=""></script>
     <title>Mapdot</title>
 </head>
-<body>
-    <div id="map" style="height: 800;"></div>
+<body style="background-color: darkslategray;">
+    <div id="map" style="height: 800; border: solid black 5px; border-radius: 5px; margin-bottom: 10px;"></div>
 
-        <input type="number" name="radius" min="0" id="radius" onchange="setCircle()" placeholder="Diameter in kilometers">
-        <input type="button" value="Randomize point" onclick="getRandomPoint()">
-        <input type="button" value="Remove dots" onclick="removeDots()">
-        <input type="button" value="Reset Circle" onclick="resetCircle()">
+    <div class="inputs">
+        <input type="number" name="radius" min="0" id="radius" onchange="setCircle()" placeholder="Diameter in kilometers"> <br>
+        <input type="button" value="Randomize point" onclick="getRandomPoint()"> <br>
+        <input type="button" value="Remove dots" onclick="removeDots()"> <br>
+        <input type="button" value="Reset Circle" onclick="resetCircle()"> <br>
+    </div>
 
+    <style>
+        /* .inputs{
+            display: flex;
+            justify-content: center;
+        } */
+        .inputs input{
+            margin: 5px;
+            width: auto;
+            font-size:larger;
+            color:aliceblue;
+            background-color:dimgray;
+        }
+        .inputs ::placeholder {
+            color:aliceblue;
+        }
+    </style>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
