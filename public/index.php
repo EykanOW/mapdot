@@ -21,6 +21,9 @@
     </div>
 
     <style>
+        body{
+            margin-right: 40px;
+        }
         /* .inputs{
             display: flex;
             justify-content: center;
